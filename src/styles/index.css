@@ -1,18 +1,14 @@
-body {
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
 .counter {
-  display: flex;
+  display: flex;               /* coloca los dígitos en fila */
+  flex-direction: row;         /* asegura orientación horizontal */
+  justify-content: center;     /* centra horizontalmente */
+  align-items: center;         /* centra verticalmente */
   background-color: black;
   padding: 20px;
 }
 
-.clock, .digit {
+.clock,
+.digit {
   background-color: #222;
   color: white;
   font-size: 60px;
@@ -21,25 +17,11 @@ body {
   border-radius: 10px;
   text-align: center;
 }
-.counter-container {
+
+body {
+  background-color: black;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-}
-
-.controls {
-  margin-top: 20px;
-  display: flex;
-  gap: 10px;
-}
-
-.controls input {
-  padding: 10px;
-  font-size: 18px;
-}
-
-.controls button {
-  padding: 10px 15px;
-  font-size: 18px;
-  cursor: pointer;
+  height: 100vh;
 }

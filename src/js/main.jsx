@@ -1,18 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
-// Bootstrap
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap";
-
-// Estilos globales
+import Home from "./components/Home";
 import "../styles/index.css";
 
-// Componentes
-import Home from "./components/Home";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <Home />
-  </React.StrictMode>
-);
+let seconds = 0;
+
+// Cada segundo aumenta el contador
+setInterval(() => {
+  seconds++;
+
+  ReactDOM.createRoot(document.getElementById("root")).render(
+    <React.StrictMode>
+      <Home seconds={seconds} />
+    </React.StrictMode>
+  );
+}, 1000);

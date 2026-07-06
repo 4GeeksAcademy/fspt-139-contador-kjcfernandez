@@ -1,10 +1,10 @@
 import React from "react";
 import SecondsCounter from "./SecondsCounter";
 
-const Home = () => {
+const Home = ({ seconds }) => {
   return (
     <div className="text-center">
-      <SecondsCounter />
+      <SecondsCounter seconds={seconds} />
     </div>
   );
 };
